@@ -1,0 +1,39 @@
+{
+  "name": "websocket-example",
+  "module": "src/main.ts",
+  "version": "0.0.1",
+  "type": "module",
+  "author": {
+    "name": "Nguyen Nhu Khanh",
+    "email": "kwalker.nnk@gmail.com"
+  },
+  "description": "Websocket with ThanhHoaJS",
+  "scripts": {
+    "start-server": "bun run --watch src/main.ts",
+    "start-client": "bun run --watch public/app.ts ",
+    "start": "concurrently \"bun run start-server\" \"bun run start-client\"",
+    "format": "prettier --write src/**/*",
+    "lint": "eslint \"{src,test}/**/*.ts\" --fix"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "concurrently": "^9.0.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^3.2.0",
+    "prettier": "^2.8.8"
+  },
+  "peerDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@thanhhoajs/logger": "latest",
+    "@thanhhoajs/validator": "latest",
+    "@thanhhoajs/websocket": "latest"
+  }
+}
